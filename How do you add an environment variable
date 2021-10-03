@@ -1,0 +1,80 @@
+How do I set an environment variable?
+You can set an environment variable on a Linux, Windows, or Mac platform with the instructions given below.
+
+If you want to use Schrödinger applications using the command line, see this cheat sheet for an overview.
+
+Linux
+To set an environment variable on Linux, enter the following command at a shell prompt, according to which shell you are using:
+
+csh/tcsh: setenv variable value
+bash/ksh: export variable=value
+
+where variable is the name of the environment variable (such as SCHRODINGER) and value is the value you want to assign to the variable, (such as /opt/schrodinger2019-3). To find out what environment variables are set, use the env command. To remove a variable from the environment, use the following commands:
+
+csh/tcsh: unsetenv variable
+bash/ksh: export -n variable
+
+Windows
+You can create or change environment variables in the Environment Variables dialog box. If you are adding to the PATH environment variable or any environment variable that takes multiple values, you should separate each value with a semicolon (;).
+
+Windows 8 and Windows 10
+To open the Environment Variables dialog box:
+
+In Search, search for and then select: Edit environment variables for your account
+To create a new environment variable:
+
+In the User variables section, click New to open the New User Variable dialog box.
+Enter the name of the variable and its value, and click OK. The variable is added to the User variables section of the Environment Variables dialog box.
+Click OK in the Environment Variables dialog box.
+To modify an existing environment variable:
+
+In the User variables section, select the environment variable you want to modify.
+Click Edit to open the Edit User Variable dialog box.
+Change the value of the variable and click OK. The variable is updated in the User variables section of the Environment Variables dialog box.
+When you have finished creating or editing environment variables, click OK in the Environment Variables dialog box to save the values.
+
+Windows 7
+To open the Environment Variables dialog box:
+
+Click Start, then click Control Panel
+Click User Accounts.
+Click User Accounts again.
+In the Task side pane on the left, click Change my environment variables to open the Environment Variables dialog box opens.
+To create a new environment variable:
+
+In the User variables section, click New to open the New User Variable dialog box.
+Enter the name of the variable and its value, and click OK. The variable is added to the User variables section of the Environment Variables dialog box.
+Click OK in the Environment Variables dialog box.
+To modify an existing environment variable:
+
+In the User variables section, select the environment variable you want to modify.
+Click Edit to open the Edit User Variable dialog box opens.
+Change the value of the variable and click OK. The variable is updated in the User variables section of the Environment Variables dialog box.
+When you have finished creating or editing environment variables, click OK in the Environment Variables dialog box to save the values. You can then close the Control Panel.
+
+macOS
+To set an environment variable on macOS, open a terminal window. If you are setting the environment variable to run jobs from the command line, use the following command:
+
+export variable=value
+
+where variable is the name of the environment variable (such as SCHRODINGER) and value is the value you want to assign to the variable, (such as /opt/schrodinger/suites2019-3). You can find out which environment variables have been set with the env command.
+
+If you are setting the environment variable globally to use with applications, use the commands given below. The environment variables set by these commands are inherited by any shell or application.
+
+macOS newer than 10.10
+
+See this article for instructions on how to create a "plist" file to store system-wide environment variables in newer versions of macOS.
+
+MacOS X 10.10
+
+To set an environment variable, enter the following command:
+
+launchctl setenv variable "value"
+
+To find out if an environment variable is set, use the following command:
+
+launchctl getenv variable
+
+To clear an environment variable, use the following command:
+
+launchctl unsetenv variable
